@@ -61,7 +61,8 @@ my_string = input("3. Please enter a sentence: ")
 new_string = ""
 
 for chr in my_string:
-    print(chr, end="")
+    new_string += chr
+    print(new_string)
 
 print ("\n")
 
