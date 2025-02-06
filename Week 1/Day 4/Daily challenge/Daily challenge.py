@@ -33,7 +33,7 @@ $a
 
 encrypted_string = ""
 
-# just to remove the newline in the string (although maybe there is a function in python that can do this)
+# just to remove the newline in the string
 for chr in encrypted_string_with_newline:
     if chr != "\n":
         encrypted_string += chr
