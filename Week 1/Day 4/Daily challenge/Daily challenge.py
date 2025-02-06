@@ -61,7 +61,7 @@ letter = False
 for line in range(len(Matrix[0])):  # 3
     for column in range(len(Matrix)):  # 8
         chr = Matrix[column][line]
-        if chr>='a' and chr<='z' or chr>='A' and chr<='Z':
+        if chr.isalpha():
             matrix_string_decrypted_message += chr
             letter = True
         elif letter:
