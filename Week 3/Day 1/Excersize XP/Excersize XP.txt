@@ -1,0 +1,208 @@
+'''
+
+Exercises XP
+
+An Essay/Report on Data Analysis (Exercise 1): A written piece that defines data analysis, discusses its significance, and explores its applications in today’s world.
+Data Type Classification Report (Exercise 2): A detailed analysis of the Iris dataset, categorizing each column as either qualitative or quantitative with accompanying explanations.
+A Data Analysis Notebook (Exercise 3): A comprehensive Jupyter notebook that includes calculations of statistical measures (mean, median, mode), data visualizations (histograms, bar charts), and documentation of findings, demonstrating basic data analysis skills.
+
+'''
+
+print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+
+'''
+Exercise 1: Introduction to Data Analysis
+
+
+Objective: Understand the basic overview and significance of data analysis.
+
+Write a short essay or report on the following topics:
+
+What is data analysis?
+Why is data analysis important in modern contexts?
+List and describe three areas where data analysis is applied today.
+
+
+Data Analysis
+---------------------------
+
+What is Data Analysis?
+Data analysis uses statistical and logical methods to understand, clean, and model the data.
+This is so we can get insights and help the organization decision-making.
+
+Why is Data Analysis Important?
+Because today we live in a data-driven world.
+Data analysis helps organizations make better decisions, improve efficiency and understand customers better.
+It is also important for risk management, fraud detection, and predictive modeling.
+
+Applications of Data Analysis
+There are many fields in which Data Analysis is useful.
+like:
+Healthcare: Enhances patient medical results.
+E-commerce: Increase sales by recommending personalized products.
+Finance: Aids in risk management and fraud detection.
+
+Current Trends
+Integration of AI and machine learning for automation and enhanced analysis.
+Augmented Analytics: Using AI to assist with data preparation, insight generation, and explanation.
+Real-time analytics and visualization for timely decision-making.
+
+Real-World Examples
+LinkedIn uses data analytics to recommend job opportunities.
+Uber relies on data analytics for dynamic pricing and route optimization.
+Spotify uses data analytics to recommend songs and playlists based on user listening habits.
+
+
+
+print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+
+'''
+
+Exercise 2: Dataset Loading and Initial Analysis
+
+
+Objective: Practice dataset loading from Kaggle and initial analysis.
+
+for the following dataset : How Much Sleep Do Americans Really Get?, Global Trends in Mental Health Disorder and Credit Card Approvals.
+
+Load the dataset into Jupyter or Google Colab.
+Display the first few rows.
+Provide a brief dataset description.
+
+'''
+
+For example:
+
+from google.colab import files
+files.upload()
+
+(Upload the file: How_Much_Sleep_Do_Americans.zip)
+
+!unzip /content/How_Much_Sleep_Do_Americans.zip
+
+import pandas as pd
+train_data = pd.read_csv('/content/Time Americans Spend Sleeping.csv')
+
+print(train_data.head())
+
+print(train_data.describe())
+
+print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+
+
+'''
+
+Exercise 3: Identifying Data Types
+
+
+Objective: Learn to identify different data types.
+
+For the datasets from the previous exercise, categorize each column of it as either quantitative or qualitative and explain your reasoning.
+
+'''
+
+Time Americans Spend Sleeping.csv
+all columns are quantitative
+
+Mental health Depression disorder Data.csv
+The "Entity" and "Code" fields are qualitative.
+The rest are quantitative.
+
+Credit_Card_Approvals_(Clean_Data).zip
+I couldn't load it - there's an error.
+
+
+Quantitative (Numerical Data): Columns containing numeric values that can be measured or counted and used in mathematical operations.
+These can be:
+Discrete: Whole numbers (e.g., number of students, product count)
+Continuous: Measurable values (e.g., height, weight, temperature)
+
+Qualitative (Categorical Data): Columns containing non-numeric values representing categories, labels, or characteristics.
+These can be:
+Nominal: Categories with no inherent order (e.g., gender, country, eye color)
+Ordinal: Categories with a meaningful order but no uniform difference (e.g., satisfaction level, education level)
+
+
+print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+
+
+'''
+Exercise 4: Exploring Data Types
+
+
+Objective: Learn about different types of data in data analysis.
+
+Load the Iris dataset using Kaggle into a Jupyter Notebook or Google Colaboratory Notebook.
+Identify and list which columns in your dataset are qualitative and which are quantitative.
+Write a brief description of why each column is classified as qualitative or quantitative.
+Tools: Jupyter Notebook, Python with Pandas library.
+
+
+'''
+
+
+This is like exercise 2.
+
+The "Species" column - is a category.
+All other columns are Quantitative.
+
+
+print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+
+'''
+Exercise 5: Basic Data Analysis with Google Colab
+
+
+Objective: Perform basic data analysis using Google Colab.
+
+Using the same notebook from the previous exercise, perform basic data analysis tasks:
+Calculate the mean, median, and mode of a quantitative column.
+Create a simple plot (like a histogram or bar chart) to visualize the data using Matplotlib/Seaborn libraries :
+
+Document your findings in the notebook.
+Tools: Google Colab, Python with Pandas and Matplotlib/Seaborn libraries.
+
+'''
+
+This is like exercise 2.
+
+AND ALSO:
+
+import matplotlib.pyplot as plt
+plt.plot(train_data['Id'], train_data['SepalLengthCm'])
+plt.show()
+
+
+import numpy as np
+from scipy import stats
+
+mean_value = np.mean(data[quant_col])
+median_value = np.median(data[quant_col])
+mode_value = stats.mode(data[quant_col]).mode[0]
+
+
+
+print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+
+'''
+
+Exercise 6: Basic Observation Skills in Data Analysis
+
+Objective: Develop observation skills for data analysis.
+
+Load the How Much Sleep Do Americans Really Get? dataset into Jupyter or Google Colab.
+Identify columns that could be interesting for a specific type of analysis (e.g., trend analysis, group comparison) and explain your choice.
+Tools: Jupyter Notebook, Python with Pandas library.
+
+
+'''
+
+This is like exercise 2.
+
+Time Americans Spend Sleeping.csv
+
+The importand columns are "Age" and "Avg hrs per day sleeping".
+These are the main important details.
+We can check how many hours a person sleeps according to their age.
+
+
