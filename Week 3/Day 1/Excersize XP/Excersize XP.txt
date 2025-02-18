@@ -71,6 +71,8 @@ Provide a brief dataset description.
 
 '''
 
+I did all the examples.
+
 For example:
 
 from google.colab import files
@@ -86,6 +88,7 @@ train_data = pd.read_csv('/content/Time Americans Spend Sleeping.csv')
 print(train_data.head())
 
 print(train_data.describe())
+
 
 print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
@@ -141,7 +144,8 @@ Tools: Jupyter Notebook, Python with Pandas library.
 '''
 
 
-This is like exercise 2.
+This is based on exercise 2.
+So I did it again.
 
 The "Species" column - is a category.
 All other columns are Quantitative.
@@ -164,21 +168,24 @@ Tools: Google Colab, Python with Pandas and Matplotlib/Seaborn libraries.
 
 '''
 
-This is like exercise 2.
+This is based on exercise 2.
 
 AND ALSO:
 
 import matplotlib.pyplot as plt
-plt.plot(train_data['Id'], train_data['SepalLengthCm'])
-plt.show()
-
-
 import numpy as np
 from scipy import stats
+import seaborn as sns
 
-mean_value = np.mean(data[quant_col])
-median_value = np.median(data[quant_col])
-mode_value = stats.mode(data[quant_col]).mode[0]
+Avg hrs = train_data['Avg hrs per day sleeping']
+
+mean_Avg hrs = Avg hrs.mean()
+median_Avg hrs = Avg hrs.median()
+mode_Avg hrs = Avg hrs.mode()[0]
+
+print(f'mean', mean_Avg hrs)
+print(f'median', median_Avg hrs)
+print(f'mode', mode_Avg hrs)
 
 
 
@@ -197,7 +204,7 @@ Tools: Jupyter Notebook, Python with Pandas library.
 
 '''
 
-This is like exercise 2.
+This is based on exercise 2.
 
 Time Americans Spend Sleeping.csv
 
