@@ -1,0 +1,23 @@
+Overview
+Build an AI-driven document search and summarization tool that allows users to upload PDFs, Word files, or text documents, search for relevant information, and generate concise summaries.
+
+This is a hands-on project that combines Uses vector databases (FAISS/Pinecone), Retrieval-Augmented Generation (RAG), Transformer models (BERT, DistilBERT), fine-tuning, and evaluation techniques.
+
+Key Components of the project:
+1. Document ingestion: Allow users to upload documents (PDFs, text files).
+2. Use BERT-based embeddings to convert text into searchable vectors.
+3. Store embeddings in a vector database (FAISS/Pinecone) for efficient retrieval.
+4. Develop a search interface that allows users to input queries and retrieve the most relevant document sections.
+5. Use BERT-based summarization to generate concise summaries of retrieved content.
+6. Evaluate search and summarization results using BLEU, ROUGE, and perplexity scores.
+
+Some CPU-Friendly Considerations:
+1. Recommended Models to use: distilBERT, sentence-transformers/all-MiniLM-L6-v2, BART-base, T5-small
+2. Library Usage: sentence-transformers, faiss, transformers, datasets
+
+Some optimization tips:
+1. Use sentence-transformers models for efficient embeddings (all-MiniLM over BERT-base)
+2. Reduce the dataset (take only a subset of text documents for vectorization)
+3. Use FAISS with CPU-friendly settings (disable large-scale indexing features)
+4. Process smaller batch sizes (batch_size=2 or 4)
+
